@@ -31,9 +31,9 @@ public class Etablissement {
 	//3 : ville
 	//4 : CP
 	//5 : type
-	//6 : NO2_2012 ├а 11 : NO2_2017
-	//12 : PM10_2012 ├а 17 : PM10_2017
-	//18 : PM25_2012 ├а 23 : PM25_2017
+	//6 : NO2_2012 ра 11 : NO2_2017
+	//12 : PM10_2012 ра 17 : PM10_2017
+	//18 : PM25_2012 ра 23 : PM25_2017
 	//24 : geometry
 	public Etablissement(String[] line) {
 		this(line[0], new Lieu(line[4],line[2],line[3]), null, line[1], line[24]);

@@ -174,6 +174,50 @@ public class FenetrePrincipale extends JFrame{
 
 		return panel;
 	}
+	/*
+	JPanel onglet5 = new JPanel();
+	JLabel labelTableau=new JLabel();
+	Etablissement etabNO2,etabPM10,etabPM25;
+	JTable table;
+	JScrollPane spane;
+	TableauStat4 tab4;
+
+	onglet5.setLayout(new GridBagLayout());
+	GridBagConstraints c = new GridBagConstraints();
+	c.gridy = 0;
+	for(int annee=2012; annee<=2017; annee++) {
+
+		labelTableau.setText(" "+annee);
+
+		etabNO2 = StatEtab.getPlusPolluantNO2(ConvertCSV.listeEtab, annee);
+		etabPM10 = StatEtab.getPlusPolluantPM10(ConvertCSV.listeEtab, annee);			
+		etabPM25 = StatEtab.getPlusPolluantPM25(ConvertCSV.listeEtab, annee);
+		
+		if(etabNO2!=null && etabPM10!=null && etabPM25!=null) {
+			Etablissement[] etabs = new Etablissement[3];
+			etabs[0] = etabNO2;
+			etabs[1] = etabPM10;
+			etabs[2] = etabPM25;tab4 = new TableauStat4(etabs, annee);
+			etabs[3] = annee;
+			
+
+			table = new JTable(tab4);
+			spane =new JScrollPane(table);
+
+			table.setCellSelectionEnabled(false);
+
+			table.setPreferredSize(new Dimension(500,80));
+			table.setPreferredScrollableViewportSize(table.getPreferredSize());
+			table.setFillsViewportHeight(true);
+
+			//onglet2.add(labelTableau,c);
+			onglet5.add(spane,c);
+			c.gridy++;
+		}
+		
+	}
+
+	onglets.addTab("Les plus pollués", onglet5);*/
 
 
 }

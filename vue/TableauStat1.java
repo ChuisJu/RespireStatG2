@@ -81,11 +81,16 @@ public class TableauStat1 extends AbstractTableModel{
 
 			case 4:
 				// PM25
-				return etabs[columnIndex-1].getPollutionNO2(annee);
-			/*case 5:
-				// Distance
-				return etabs[columnIndex-1].getDistance();*/
+				switch(columnIndex-1) {
+                case 0:
+                    return etabs[columnIndex-1].getPollutionNO2(annee);
+                case 1:
+                  return etabs[columnIndex-1].getPollutionPM10(annee);
+                case 2:
+                    return etabs[columnIndex-1].getPollutionPM25(annee);
+				}
 
+				
 			default:
 				throw new IllegalArgumentException();
 			}

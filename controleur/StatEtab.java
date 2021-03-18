@@ -129,15 +129,16 @@ public class StatEtab {
 	 * Flavie Tonon
 	 */
 	public static Etablissement getPlusPolluantNO2(ArrayList<Etablissement> l, int annee) {
-		//TODO Compl√©ter getPlusPolluantNO2 
-		for ( int i = 2012; i < 2017; i++) {
-			for (Etablissement e : l) {
-				if (i.equals(e.getPollutionNO2()) {
-					
-				}
+		//TODO ComplÈter getPlusPolluantNO2 
+		
+		for (Etablissement e : l) {
+			double etabmaxNO2 = e.getPollutionNO2(annee);
+			if (e.getPollutionNO2(annee)>etabmaxNO2) {
+				etabmaxNO2 = e.getPollutionNO2(annee);               
 			}
+			
 		}
-		return null;
+		return etabmaxNO2;
 	}
 	/**
 	 * Trouve l'Ètablissement le plus polluant au PM10 sur une annÈe
@@ -161,4 +162,35 @@ public class StatEtab {
 		//TODO Compl√©ter getPlusPolluantPM25 
 		return null;
 	}
+	
+	
+	/*public static double getMoyennePolluantPM10Ville(ArrayList<Etablissement> l, String ville, int annee) {
+		double moy = 0;
+		for(Etablissement e : l) {
+			if(e.getLieu().getVille().equals(ville)) {
+				moy+=e.getPollutionPM10(annee);
+			}
+		}
+		return moy/l.size();
+	}
+	
+	public static double getMoyennePolluantPM10Ville(ArrayList<Etablissement> l, String ville, int annee) {
+		double moy = 0;
+		for(Etablissement e : l) {
+			if(e.getLieu().getVille().equals(ville)) {
+				moy+=e.getPollutionPM10(annee);
+			}
+		}
+		return moy/l.size();
+	}
+	
+	public static double getMoyennePolluantPM10Ville(ArrayList<Etablissement> l, String ville, int annee) {
+		double moy = 0;
+		for(Etablissement e : l) {
+			if(e.getLieu().getVille().equals(ville)) {
+				moy+=e.getPollutionPM10(annee);
+			}
+		}
+		return moy/l.size();
+	}*/
 }
