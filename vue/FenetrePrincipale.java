@@ -47,7 +47,7 @@ public class FenetrePrincipale extends JFrame{
 		ConvertCSV.chargerEtablissements(csvPath+"/"+csvFileName);
 		
 		setTitle("RespireStat");
-		setSize(960,720);
+		setSize(1080,800);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,13 +60,13 @@ public class FenetrePrincipale extends JFrame{
 
 		//ONGLETS
 		JTabbedPane onglets = new JTabbedPane(SwingConstants.TOP);
-		onglets.setPreferredSize(new Dimension(900,680));
+		onglets.setPreferredSize(new Dimension(1020,760));
 
 		//ONGLET 1
 		JPanel onglet1 = new JPanel();
 		JLabel label;
 		label = new JLabel();
-		label.setText("<html><body><p style='text-align:center'>Ouverture du fichier"+csvPath+"/"+csvFileName+"<br>Bienvenue sur l'application RespireStat<br /><br />Cliquez sur un des onglets pour accéder aux statistiques</p></body></html>");
+		label.setText("<html><body><p style='text-align:center'>Ouverture du fichier"+csvPath+"/"+csvFileName+"<br>Bienvenue sur l'application RespireStat<br /><br />Cliquez sur un des onglets pour accéder aux statistiques</p><br><p style='text-align:center'>By Julien & Corentin</p></body></html>");
 		panel.add(label);
 		onglet1.add(label);
 
