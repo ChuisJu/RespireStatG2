@@ -172,19 +172,18 @@ public class FenetrePrincipale extends JFrame{
 		panel.add(onglets);
 
 
-		return panel;
-	}
-	/*
-	JPanel onglet5 = new JPanel();
-	JLabel labelTableau=new JLabel();
-	Etablissement etabNO2,etabPM10,etabPM25;
-	JTable table;
-	JScrollPane spane;
-	TableauStat4 tab4;
+		
+	
+		JPanel onglet5 = new JPanel();
+		/*	JLabel labelTableau=new JLabel();
+		Etablissement etabNO2,etabPM10,etabPM25;
+		JTable table;
+		JScrollPane spane;
+		TableauStat4 tab4;
 
-	onglet5.setLayout(new GridBagLayout());
-	GridBagConstraints c = new GridBagConstraints();
-	c.gridy = 0;
+		onglet5.setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
+		c.gridy = 0;
 	for(int annee=2012; annee<=2017; annee++) {
 
 		labelTableau.setText(" "+annee);
@@ -215,9 +214,10 @@ public class FenetrePrincipale extends JFrame{
 			c.gridy++;
 		}
 		
+		}*/
+
+		onglets.addTab("Les plus pollués", onglet5);
+		return panel;
 	}
-
-	onglets.addTab("Les plus pollués", onglet5);*/
-
 
 }
