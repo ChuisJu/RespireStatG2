@@ -130,15 +130,14 @@ public class StatEtab {
 	 */
 	public static Etablissement getPlusPolluantNO2(ArrayList<Etablissement> l, int annee) {
 		//TODO Compléter getPlusPolluantNO2 
-		
+		Etablissement etablissementLePlusPolluant;
+		etablissementLePlusPolluant = l.get(0);
 		for (Etablissement e : l) {
-			double etabmaxNO2 = e.getPollutionNO2(annee);
-			if (e.getPollutionNO2(annee)>etabmaxNO2) {
-				etabmaxNO2 = e.getPollutionNO2(annee);               
+			if (e.getPollutionNO2(annee)>etablissementLePlusPolluant.getPollutionNO2(annee)){
+				etablissementLePlusPolluant = e;
 			}
-			
 		}
-		return etabmaxNO2;
+		return etablissementLePlusPolluant;
 	}
 	/**
 	 * Trouve l'établissement le plus polluant au PM10 sur une année
@@ -148,19 +147,31 @@ public class StatEtab {
 	 * Flavie Tonon
 	 */
 	public static Etablissement getPlusPolluantPM10(ArrayList<Etablissement> l, int annee) {
-		//TODO Compléter getPlusPolluantPM10 
-		return null;
+		Etablissement etablissementLePlusPolluant;
+		etablissementLePlusPolluant = l.get(0);
+		for (Etablissement e : l) {
+			if (e.getPollutionPM10(annee)>etablissementLePlusPolluant.getPollutionPM10(annee)){
+				etablissementLePlusPolluant = e;
+			}
+		}
+		return etablissementLePlusPolluant;
 	}
 	/**
-	 * Trouve l'Ã©tablissement le plus polluant au PM25 sur une annÃ©e
-	 * @param l La liste des Ã©tablissements
-	 * @param annee L'annÃ©e de rÃ©colte des donnÃ©es demandÃ©e
-	 * @return L'Ã©tablissement le plus polluant au PM25
+	 * Trouve l'établissement le plus polluant au PM25 sur une année
+	 * @param l La liste des établissements
+	 * @param annee L'année de récolte des données demandée
+	 * @return L'établissement le plus polluant au PM25
 	 * Flavie Tonon
 	 */
 	public static Etablissement getPlusPolluantPM25(ArrayList<Etablissement> l, int annee) {
-		//TODO ComplÃ©ter getPlusPolluantPM25 
-		return null;
+		Etablissement etablissementLePlusPolluant;
+		etablissementLePlusPolluant = l.get(0);
+		for (Etablissement e : l) {
+			if (e.getPollutionPM25(annee)>etablissementLePlusPolluant.getPollutionPM25(annee)){
+				etablissementLePlusPolluant = e;
+			}
+		}
+		return etablissementLePlusPolluant;
 	}
 	
 	

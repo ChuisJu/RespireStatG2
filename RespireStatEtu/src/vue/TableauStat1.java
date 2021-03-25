@@ -89,6 +89,9 @@ public class TableauStat1 extends AbstractTableModel{
                 case 2:
                     return etabs[columnIndex-1].getPollutionPM25(annee);
 				}
+			case 5:
+				//Distance
+				//return etabs[columnIndex-1].getLieu().;
 
 				
 			default:
